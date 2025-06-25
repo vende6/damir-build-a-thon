@@ -5,7 +5,7 @@ import path from "path";
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
-const model = "gpt-4o"; // Replace with your model name
+const model = "gpt-4.1"; // Replace with your model name
 
 export async function main() {
 try {
