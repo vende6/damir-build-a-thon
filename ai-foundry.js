@@ -24,4 +24,4 @@ var response = await client.path("chat/completions").post({
   },
 });
 
-console.log(JSON.stringify(response));
+console.log(response.body.choices[0].message.content);
