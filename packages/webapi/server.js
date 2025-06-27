@@ -29,7 +29,7 @@ app.post("/chat", async (req, res) => {
         max_tokens: 4096,
         temperature: 1,
         top_p: 1,
-        model: "gpt-4o",
+        model: "gpt-4.1",
       },
     });
     res.json({ reply: response.body.choices[0].message.content });
@@ -41,5 +41,7 @@ app.post("/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`AI API server running on port ${PORT}`);
+    console.log(process.env.AZURE_INFERENCE_SDK_ENDPOINT);
+    console.log(process.env.AZURE_INFERENCE_SDK_KEY);
+  console.log(`AI API serverz running on port ${PORT}`);
 });
